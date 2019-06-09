@@ -105,3 +105,11 @@ hi cssClassName ctermfg=74 ctermbg=NONE cterm=NONE guifg=#72aaca guibg=NONE gui=
 hi cssValueLength ctermfg=150 ctermbg=NONE cterm=NONE guifg=#b8d977 guibg=NONE gui=NONE
 hi cssCommonAttr ctermfg=150 ctermbg=NONE cterm=NONE guifg=#b7d877 guibg=NONE gui=NONE
 hi cssBraces ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
+
+
+" python
+hi link pythonDef            Operator
+hi link pythonDocstring      Comment
+hi link pythonSpecial        Boolean
+hi link pythonDecorator      Type
+hi link pythonAs			 PreProc
