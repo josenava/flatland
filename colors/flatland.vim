@@ -47,7 +47,7 @@ hi Keyword ctermfg=209 ctermbg=NONE cterm=NONE guifg=#fa9a4b guibg=NONE gui=NONE
 hi Label ctermfg=231 ctermbg=NONE cterm=NONE guifg=#f6f6f6 guibg=NONE gui=NONE
 hi NonText ctermfg=102 ctermbg=59 cterm=NONE guifg=#7a8288 guibg=#313336 gui=NONE
 hi Number ctermfg=150 ctermbg=NONE cterm=NONE guifg=#b8d977 guibg=NONE gui=NONE
-hi Operator ctermfg=209 ctermbg=NONE cterm=NONE guifg=#fa9a4b guibg=NONE gui=NONE
+hi Operator ctermfg=209 ctermbg=NONE cterm=NONE guifg=#fa9a4b guibg=NONE gui=bold
 hi PreProc ctermfg=209 ctermbg=NONE cterm=NONE guifg=#fa9a4b guibg=NONE gui=NONE
 hi Special ctermfg=231 ctermbg=NONE cterm=NONE guifg=#f8f8f8 guibg=NONE gui=NONE
 hi SpecialKey ctermfg=102 ctermbg=59 cterm=NONE guifg=#7a8288 guibg=#3b3e40 gui=NONE
