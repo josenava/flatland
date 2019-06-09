@@ -1,68 +1,52 @@
 # Flatland
 
 ## About
+This is my own fork of flatland, please use it at your own risk, all credit goes to the original author [Original Author]
 
-Flatland is a simple theme and accompanying color scheme for Sublime Text 2 & 3. It is mostly derived from  [Soda](https://github.com/buymeasoda/soda-theme), the right place to start for any custom theme development for Sublime. Thanks Soda!
-
+[Original Author]: https://github.com/thinkpixellab/flatland
 ## Design
 
-![Screen Shot!](https://raw.github.com/thinkpixellab/flatland/master/screenshots.png)
-
+![Screen Shot!](https://raw.github.com/josenava/flatland/master/screenshot/vim-flatland.png)
 
 ## Installation
-Flatland is a Sublime package. There are several ways to install it.
+With your favourite plugin manager.
 
-### Sublime Package Control
-You can install it using the excellent [Package Control][] package manager for Sublime Text:
+### dein
+```
+call dein#add('josenava/flatland')
 
-1. Open "Package Control: Install Package" from the Sublime quick menu (Command-Shift-P).
-2. Select the 'Theme - Flatland' option to install Flatland.
-
-[Package Control]: http://wbond.net/sublime_packages/package_control
-
-### Git Installation
-Alternatively, if you are a git user, you can install the theme and keep up to date by cloning the repo directly into your `Packages` directory in the Sublime Text application settings area.
-
-While inside the `Packages` directory, clone the theme repository using the command below:
-
-```bash
-git clone git://github.com/thinkpixellab/flatland.git "Theme - Flatland"
 ```
 
-### Manual Installation
-You can also install it manually by following these instructions:
+## Custom python syntax highlighting
 
-1. [Download theme files](https://github.com/thinkpixellab/flatland/archive/master.zip)
-2. Unzip the files and copy the folder newly created folder into your Sublime Text Packages directory with the name `Theme - Flatland`. You can find that directory by selecting "Preferences > Browse Packages ...".
+If you would like to try python's syntax highlighting you might need a bit more of configuration. First of all
+enable python syntax highlighting with `let python_syntax_highlight = 1`
 
-
-## Activating the Theme
-Activate the theme by modifying your user preferences to include the following:
-
-```javascript
-{
-  "theme": "Flatland Dark.sublime-theme",
-  "color_scheme": "Packages/Theme - Flatland/Flatland Dark.tmTheme"
-}
+Then modify your `after/syntax/python.vim` and add the following
 ```
+" Remove doctest highlighting by commenting out pythonDoctest and pythonDocTest:
+syn region pythonDocstring  start=+^\s*[uU]\?[rR]\?'''+ end=+'''+ keepend
+  \ excludenl contains=pythonEscape,@Spell,pythonSpaceError",pythonDoctest,pythonDocTest2
+" " Make these special variables more special
+syn keyword pythonSpecial False True None self
+" " Highlight def statements different from normal python statements
+" syn keyword pythonDef def class del global lambda nonlocal
+" " Highlight 'as' different from normal python statements
+syn keyword pythonAs as
+" " Highlight the whole name of a decorator, not just the '@'
+syn match pythonDecorator "@\w\.\+\>"
+" " Highlight 'magic' overload functions
+syn keyword pythonMagic __abs__ __add__ __aenter__ __aexit__ __aiter__ __and__ __anext__
+  \ __await__ __bytes__ __call__ __complex__ __contains__ __del__ __delattr__ __delete__
+  \ __delitem__ __dir__ __divmod__ __enter__ __eq__ __exit__ __float__ __floordiv__
+  \ __format__ __ge__ __get__ __getattr__ __getattribute__ __getitem__ __gt__ __hash__
+  \ __iadd__ __iand__ __ifloordiv__ __ilshift__ __imod__ __imul__ __index__ __init__
+  \ __int__ __invert__ __ior__ __ipow__ __irshift__ __isub__ __iter__ __itruediv__ __ixor__
+  \ __le__ __len__ __lshift__ __lt__ __mod__ __mul__ __ne__ __neg__ __new__ __next__ __or__
+  \ __pos__ __pow__ __radd__ __rand__ __rdivmod__ __repr__ __reversed__ __rfloordiv__
+  \ __rlshift__ __rmod__ __rmul__ __ror__ __rpow__ __rrshift__ __rshift__ __rsub__
+  \ __rtruediv__ __rxor__ __set__ __setattr__ __setitem__ __str__ __sub__ __truediv__ __xor__
 
-If you need help locating your user preferences file, you can find it selecting "Preferences > Settings - User".
-
-## Optional Settings
-The following options can be set in your user preferences:
-
-```javascript
-{
-  // square file tabs instead of rounded corners
-  "flatland_square_tabs": true,
-
-  // Monokai color scheme (SublimeText's default) with Flatland background color
-  "color_scheme": "Packages/Theme - Flatland/Flatland Monokai.tmTheme",
-
-  // Ability to change row height of sidebar tree
-  // Options: xsmall, small, medium, large, xlarge
-  "flatland_sidebar_tree_xsmall" : true
-}
 ```
 
 ## License
