@@ -107,11 +107,10 @@ hi cssCommonAttr ctermfg=150 ctermbg=NONE cterm=NONE guifg=#b7d877 guibg=NONE gu
 hi cssBraces ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 
 hi link pythonImport        PreProc
-hi link pythonFunction      Function
 hi link pythonExceptions    PreProc
 
 " custom:
-hi pythonMagic    guibg=NONE guifg=#8e44ad gui=NONE
+hi pythonMagic    guibg=NONE guifg=#5f87ff gui=NONE
 hi link pythonDef            Operator
 hi link pythonDocstring      Comment
 hi link pythonSpecial        Boolean
