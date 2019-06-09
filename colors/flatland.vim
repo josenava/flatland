@@ -43,7 +43,7 @@ hi WarningMsg ctermfg=231 ctermbg=124 cterm=NONE guifg=#f8f8f8 guibg=#aa2915 gui
 hi Float ctermfg=150 ctermbg=NONE cterm=NONE guifg=#b8d977 guibg=NONE gui=NONE
 hi Function ctermfg=74 ctermbg=NONE cterm=bold guifg=#72aaca guibg=NONE gui=bold
 hi Identifier ctermfg=228 ctermbg=NONE cterm=NONE guifg=#f6f080 guibg=NONE gui=NONE
-hi Keyword ctermfg=209 ctermbg=NONE cterm=NONE guifg=#fa9a4b guibg=NONE gui=bold
+hi Keyword ctermfg=209 ctermbg=NONE cterm=NONE guifg=#fa9a4b guibg=NONE gui=NONE
 hi Label ctermfg=231 ctermbg=NONE cterm=NONE guifg=#f6f6f6 guibg=NONE gui=NONE
 hi NonText ctermfg=102 ctermbg=59 cterm=NONE guifg=#7a8288 guibg=#313336 gui=NONE
 hi Number ctermfg=150 ctermbg=NONE cterm=NONE guifg=#b8d977 guibg=NONE gui=NONE
@@ -106,8 +106,12 @@ hi cssValueLength ctermfg=150 ctermbg=NONE cterm=NONE guifg=#b8d977 guibg=NONE g
 hi cssCommonAttr ctermfg=150 ctermbg=NONE cterm=NONE guifg=#b7d877 guibg=NONE gui=NONE
 hi cssBraces ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 
+hi link pythonImport        PreProc
+hi link pythonFunction      Function
+hi link pythonExceptions    PreProc
 
-" python
+" custom:
+hi pythonMagic    guibg=NONE guifg=#8e44ad gui=NONE
 hi link pythonDef            Operator
 hi link pythonDocstring      Comment
 hi link pythonSpecial        Boolean
