@@ -17,6 +17,11 @@ call dein#add('josenava/flatland')
 
 ```
 
+## Remove | chars for vertical split
+```
+set fillchars+=vert:\ 
+```
+
 ## Custom python syntax highlighting
 
 If you would like to try python's syntax highlighting you might need a bit more of configuration. First of all
